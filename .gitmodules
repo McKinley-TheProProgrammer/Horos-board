@@ -1,0 +1,3 @@
+[submodule "Horusboard/Assets/ThirdParty/UnityAtoms"]
+	path = Horusboard/Assets/ThirdParty/UnityAtoms
+	url = https://gitea.firasoft.com/firasoft/unity-atoms.git

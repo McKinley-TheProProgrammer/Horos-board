@@ -11,25 +11,6 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] 
     private CardData cardData;
-    
-    [SerializeField]
-    private RectTransform cardTransform;
-    
-    [Header("Card Image Displays")]
-    [SerializeField] 
-    private Image cardBG;
-    [SerializeField]
-    private Image cardIcon;
-
-    [Header("Card Text Displays")]
-    [SerializeField] 
-    private RectTransform cardDescriptionBox;
-    [SerializeField] 
-    private TextMeshProUGUI cardDescriptionDisplay;
-    
-    private Vector2 cardDescBox_Pos;
-    
-    public bool selected;
     public void SetCardData(CardData cardData)
     {
         this.cardData = cardData;
@@ -59,6 +40,26 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
         cardBG.color = bgColor;
     }
     
+    [SerializeField]
+    private RectTransform cardTransform;
+    
+    [Header("Card Image Displays")]
+    [SerializeField] 
+    private Image cardBG;
+    [SerializeField]
+    private Image cardIcon;
+
+    [Header("Card Text Displays")]
+    [SerializeField] 
+    private RectTransform cardDescriptionBox;
+    [SerializeField] 
+    private TextMeshProUGUI cardDescriptionDisplay;
+    
+    private Vector2 cardDescBox_Pos;
+    
+    public bool selected;
+    
+    
     void Start()
     {
         if (cardTransform == null)
@@ -77,7 +78,9 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
             cardDescriptionBox.DOAnchorPosX(-cardTransform.sizeDelta.x, .2f).SetRelative(true);
         else
             cardDescriptionBox.DOAnchorPos(cardDescBox_Pos, .2f);
-        
-
     }
+    
+    
+    
+    
 }

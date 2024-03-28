@@ -47,12 +47,12 @@ public partial class @ClickControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""ClickPosition"",
-                    ""type"": ""PassThrough"",
+                    ""type"": ""Value"",
                     ""id"": ""04a31070-c9f2-4159-930e-c40ee12402fd"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [

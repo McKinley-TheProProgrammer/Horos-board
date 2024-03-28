@@ -48,6 +48,7 @@ public class InputManager : Singleton<InputManager>
     private void Update()
     {
         cursorPosition.Value = CamUtils.ScreenToWorldCustom(mainCamera,cursorActions.ClickPosition.ReadValue<Vector2>());
+        
         if(debugMode)
             Debug.Log($"{cursorPosition.Value}");
     }

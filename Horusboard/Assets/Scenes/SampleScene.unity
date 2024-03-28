@@ -304,7 +304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1994859227157137700, guid: 7e3251252a65a394cacdfa0f06eddbac, type: 3}
       propertyPath: debugMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1994859227157137700, guid: 7e3251252a65a394cacdfa0f06eddbac, type: 3}
       propertyPath: mainCamera
@@ -363,10 +363,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1640740646821095858, guid: 189c526aac519b04188075a0abaf5880, type: 3}
+      propertyPath: cardData
+      value: 
+      objectReference: {fileID: 11400000, guid: d3b4e6d2e4d06e74c987bed5879e7c88, type: 2}
+    - target: {fileID: 7357558289001578779, guid: 189c526aac519b04188075a0abaf5880, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357558289001578779, guid: 189c526aac519b04188075a0abaf5880, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357558289001578779, guid: 189c526aac519b04188075a0abaf5880, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357558289001578779, guid: 189c526aac519b04188075a0abaf5880, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357558289001578779, guid: 189c526aac519b04188075a0abaf5880, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357558289001578779, guid: 189c526aac519b04188075a0abaf5880, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357558289001578779, guid: 189c526aac519b04188075a0abaf5880, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8183661353430671049, guid: 189c526aac519b04188075a0abaf5880, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 8183661353430671049, guid: 189c526aac519b04188075a0abaf5880, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8183661353430671050, guid: 189c526aac519b04188075a0abaf5880, type: 3}
       propertyPath: m_Name
       value: CardCanvas
@@ -401,11 +437,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8183661353430671054, guid: 189c526aac519b04188075a0abaf5880, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8183661353430671054, guid: 189c526aac519b04188075a0abaf5880, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8183661353430671054, guid: 189c526aac519b04188075a0abaf5880, type: 3}
       propertyPath: m_LocalPosition.x
@@ -437,11 +473,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8183661353430671054, guid: 189c526aac519b04188075a0abaf5880, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8183661353430671054, guid: 189c526aac519b04188075a0abaf5880, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8183661353430671054, guid: 189c526aac519b04188075a0abaf5880, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

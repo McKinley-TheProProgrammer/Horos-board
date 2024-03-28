@@ -17,7 +17,8 @@ public class CardData : ScriptableObject
     
     public Sprite cardIcon;
     public Sprite cardBackground;
-    
+
+    public string miniDescription;
     [TextArea]
     public string cardDescription;
     

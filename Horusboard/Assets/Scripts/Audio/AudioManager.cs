@@ -15,21 +15,43 @@ public class Sound : ScriptableObject
     [Range(0, 1f)] 
     public float volume = 1f;
     [Range(0.1f, 3f)] 
-    public float pitch;
+    public float pitch = 1f;
+
+    public bool loop = false;
 
 }
 public class AudioManager : Singleton<AudioManager>
 {
-    public List<Sound> sounds = new List<Sound>();
+    [SerializeField]
+    private List<Sound> sounds = new List<Sound>();
+
+    private Dictionary<string, Sound> soundDict = new Dictionary<string, Sound>();
     
     void Start()
     {
-        
+        foreach (var sound in sounds)
+        {
+            
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public Sound GetSound(string soundName)
     {
-        
+        if (soundDict.TryGetValue(soundName, out Sound sound))
+        {
+            Debug.LogError($"Sound {soundName} not found in the Dictionary");
+            return null;
+        }
+
+        return soundDict[soundName];
+    }
+    public void Play(Sound sound)
+    {
+        GetSound(sound.name).audioSource.Play();
+    }
+
+    public void Stop(Sound sound)
+    {
+        GetSound(sound.name).audioSource.Stop();
     }
 }

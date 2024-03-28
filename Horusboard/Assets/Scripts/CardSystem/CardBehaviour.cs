@@ -17,7 +17,7 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
 
         cardBG.sprite = cardData.cardBackground;
         cardIcon.sprite = cardData.cardIcon;
-        cardDescriptionDisplay.text = cardData.cardDescription;
+        cardDescriptionDisplay.text = cardData.miniDescription;
 
         Color bgColor = Color.gray;
         
@@ -79,8 +79,12 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
         else
             cardDescriptionBox.DOAnchorPos(cardDescBox_Pos, .2f);
     }
-    
-    
+
+    // Uses the Card
+    public void Use()
+    {
+        
+    }
     
     
 }

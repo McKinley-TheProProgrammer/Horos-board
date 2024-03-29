@@ -20,9 +20,11 @@ MonoBehaviour:
     na Babil\xF4nia.\r\nEfeito: Carta exclusiva para Boss. Abaixa os pontos de Suprema
     do boss em 5.\r\n\r\n"
   damageBuff: 0
-  damageDebuff: 0
+  damageDebuff: 5
   defenseBuff: 0
   defenseDebuff: 0
   cureBuff: 0
   cureDebuff: 0
+  supremeBuff: 0
+  supremeDebuff: 0
   cardType: 3

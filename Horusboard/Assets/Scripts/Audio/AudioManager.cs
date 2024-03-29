@@ -31,11 +31,18 @@ public class AudioManager : Singleton<AudioManager>
     {
         foreach (var sound in sounds)
         {
+            sound.audioSource = gameObject.AddComponent<AudioSource>();
             
+            sound.audioSource.clip = sound.audioClip;
+            sound.audioSource.volume = sound.volume;
+            sound.audioSource.pitch = sound.pitch;
+            sound.audioSource.loop = sound.loop;
+            
+            soundDict.Add(sound.name,sound);
         }
     }
 
-    public Sound GetSound(string soundName)
+    private Sound GetSound(string soundName)
     {
         if (soundDict.TryGetValue(soundName, out Sound sound))
         {

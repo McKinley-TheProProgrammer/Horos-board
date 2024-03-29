@@ -15,8 +15,11 @@ MonoBehaviour:
   cardName: Leo
   cardIcon: {fileID: 0}
   cardBackground: {fileID: 0}
-  cardDescription: 
-  damageBuff: 0
+  miniDescription: +2 ATQ
+  cardDescription: "Le\xE3o possui 9 estrelas principais e \xE9 vis\xEDvel tanto
+    do hemisf\xE9rio sul quanto do norte.\r\nEfeito: Voc\xEA recebe dois pontos de
+    ATQ.\r\n"
+  damageBuff: 2
   damageDebuff: 0
   defenseBuff: 0
   defenseDebuff: 0

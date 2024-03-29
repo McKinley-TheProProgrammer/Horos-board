@@ -32,8 +32,12 @@ public class CardData : ScriptableObject
 
     [Header("Healing Properties")] 
     public int cureBuff;
-    public bool cureDebuff;
+    public int cureDebuff;
 
+    [Header("Supreme Gauge Properties")]
+    public int supremeBuff;
+    public int supremeDebuff;
+    
     [SerializeField] 
     public CardType cardType;
     

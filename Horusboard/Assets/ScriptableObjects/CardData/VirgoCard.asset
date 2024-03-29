@@ -15,11 +15,13 @@ MonoBehaviour:
   cardName: Virgo
   cardIcon: {fileID: 0}
   cardBackground: {fileID: 0}
-  cardDescription: 
+  miniDescription: ADV DEF -2
+  cardDescription: "Virgem possui 15 estrelas principais e \xE9 a maior constela\xE7\xE3o
+    do zod\xEDaco.\r\nEfeito: A defesa do advers\xE1rio diminui em 2 pontos.\r\n"
   damageBuff: 0
   damageDebuff: 0
   defenseBuff: 0
-  defenseDebuff: 0
+  defenseDebuff: 2
   cureBuff: 0
   cureDebuff: 0
   cardType: 1

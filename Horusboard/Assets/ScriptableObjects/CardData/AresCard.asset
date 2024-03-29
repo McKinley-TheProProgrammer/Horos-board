@@ -15,9 +15,12 @@ MonoBehaviour:
   cardName: Ares
   cardIcon: {fileID: 0}
   cardBackground: {fileID: 0}
-  cardDescription: 
+  miniDescription: ADV -2 ATQ
+  cardDescription: "\xC1ries possui 4 estrelas principais e \xE9 a segunda menor
+    constela\xE7\xE3o do zod\xEDaco\r\nEfeito: O ataque do advers\xE1rio diminui
+    em 2 pontos.\r\n"
   damageBuff: 0
-  damageDebuff: 0
+  damageDebuff: 2
   defenseBuff: 0
   defenseDebuff: 0
   cureBuff: 0

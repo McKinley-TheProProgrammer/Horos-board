@@ -15,11 +15,14 @@ MonoBehaviour:
   cardName: Cancer
   cardIcon: {fileID: 0}
   cardBackground: {fileID: 0}
-  cardDescription: 
+  miniDescription: +4 HP
+  cardDescription: "C\xE2ncer possui 5 estrelas principais, seu brilho \xE9 fraco
+    e ela \xE9 vista melhor durante a lua nova.\r\nEfeito: Voc\xEA recupera 4 pontos
+    de vida. \r\n"
   damageBuff: 0
   damageDebuff: 0
   defenseBuff: 0
   defenseDebuff: 0
-  cureBuff: 0
+  cureBuff: 4
   cureDebuff: 0
   cardType: 0

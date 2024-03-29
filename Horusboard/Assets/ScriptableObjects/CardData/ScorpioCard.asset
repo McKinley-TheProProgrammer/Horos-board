@@ -15,7 +15,10 @@ MonoBehaviour:
   cardName: Scorpio
   cardIcon: {fileID: 0}
   cardBackground: {fileID: 0}
-  cardDescription: 
+  miniDescription: ADV - 4 HP(x3T)
+  cardDescription: "Escorpi\xE3o possui 18 estrelas principais e \xE9 uma das constela\xE7\xF5es
+    mais brilhantes do zod\xEDaco.\r\nEfeito: Seu advers\xE1rio \xE9 afetado por
+    veneno, perdendo 4 pontos de VIDA por 3 turnos.\r\n"
   damageBuff: 0
   damageDebuff: 0
   defenseBuff: 0

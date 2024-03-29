@@ -15,7 +15,9 @@ MonoBehaviour:
   cardName: Taurus
   cardIcon: {fileID: 0}
   cardBackground: {fileID: 0}
-  cardDescription: 
+  miniDescription: DEF +2
+  cardDescription: "Touro possui 19 estrelas principais e \xE9 uma das constela\xE7\xF5es
+    mais antigas a ser observada.\r\nEfeito: Voc\xEA ganha 2 pontos de defesa.\r\n"
   damageBuff: 0
   damageDebuff: 0
   defenseBuff: 0

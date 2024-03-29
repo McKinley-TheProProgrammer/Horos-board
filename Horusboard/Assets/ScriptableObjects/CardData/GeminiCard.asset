@@ -15,7 +15,10 @@ MonoBehaviour:
   cardName: Gemini
   cardIcon: {fileID: 0}
   cardBackground: {fileID: 0}
-  cardDescription: 
+  miniDescription: SUPREMO
+  cardDescription: "G\xEAmeos possui 8 estrelas principais e se destaca pela grande
+    quantidade de estrelas bin\xE1rias.\r\nEfeito: Ao usar essa carta, a sua habilidade
+    suprema poder\xE1 ser utilizada imediatamente.\r\n"
   damageBuff: 0
   damageDebuff: 0
   defenseBuff: 0

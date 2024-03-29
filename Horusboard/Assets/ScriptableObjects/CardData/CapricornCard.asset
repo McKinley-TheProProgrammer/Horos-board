@@ -15,7 +15,10 @@ MonoBehaviour:
   cardName: Capricorn
   cardIcon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   cardBackground: {fileID: 21300000, guid: 91be5669541b8f4469b74899c3b98a1f, type: 3}
-  cardDescription: This is Capricorn Card
+  miniDescription: REFLETOR
+  cardDescription: "Capric\xF3rnio possui 13 estrelas principais e \xE9 a menor constela\xE7\xE3o
+    do zod\xEDaco\r\nEfeito: O ataque do inimigo \xE9 refletido e ele recebe o pr\xF3prio
+    dano.\r\n"
   damageBuff: 4
   damageDebuff: 0
   defenseBuff: 0

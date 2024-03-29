@@ -15,7 +15,10 @@ MonoBehaviour:
   cardName: Pisces
   cardIcon: {fileID: 0}
   cardBackground: {fileID: 0}
-  cardDescription: 
+  miniDescription: "ADV N\xC3O CURA (x3T)"
+  cardDescription: "Peixes possui 18 estrelas principais e \xE9 uma das maiores constela\xE7\xF5es
+    no c\xE9u, apesar do fraco brilho. \r\nEfeito:Seu advers\xE1rio fica incapaz
+    de se curar pelos pr\xF3ximos 3 turnos.\r\n"
   damageBuff: 0
   damageDebuff: 0
   defenseBuff: 0

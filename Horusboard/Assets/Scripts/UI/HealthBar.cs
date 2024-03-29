@@ -12,9 +12,9 @@ public class HealthBar : MonoBehaviour
     [SerializeField] 
     private Image healthBar;
 
-    public void UpdateHealthBar(int amount)
+    public void UpdateHealthBar(int health)
     {
-        healthBar.fillAmount = 1.0f * amount / status.maxHP.Value;
+        healthBar.fillAmount = 1.0f * health / status.maxHP.Value;
     }
 
 }

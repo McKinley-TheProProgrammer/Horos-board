@@ -70,9 +70,12 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
     private Vector2 cardDescBox_Pos;
     
     public bool selected;
-    
+
+    private UnitManager playerUnit;
     void Start()
     {
+        playerUnit = GameObject.FindWithTag("Player").GetComponent<UnitManager>();
+        
         if (cardTransform == null)
             cardTransform = GetComponent<RectTransform>();
 
@@ -86,9 +89,11 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
         selected = !selected;
 
         if(selected)
-            cardFullDescriptionBox.DOAnchorPosX(-cardTransform.sizeDelta.x, .2f).SetRelative(true);
+            cardFullDescriptionBox.DOAnchorPosX(-205, .2f).SetRelative(true);
         else
             cardFullDescriptionBox.DOAnchorPos(cardDescBox_Pos, .2f);
+        
+        playerUnit.AddCard(cardData);
     }
     
 }

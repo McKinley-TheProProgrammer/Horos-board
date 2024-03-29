@@ -15,11 +15,11 @@ MonoBehaviour:
   cardName: Sagittarius
   cardIcon: {fileID: 0}
   cardBackground: {fileID: 0}
-  miniDescription: 2x ATQ (x2)
+  miniDescription: +5 ATQ (x2T)
   cardDescription: "A constela\xE7\xE3o de Sagit\xE1rio possui 20 estrelas principais
     e se destaca por ter dois modelos de desenho da constela\xE7\xE3o \r\nEfeito:Flechas
-    s\xE3o atiradas no inimigo, em um ataque igual ao dobro do seu ataque.\r\n"
-  damageBuff: 0
+    s\xE3o atiradas no inimigo, em um ataque igual ao seu ataque +5, por 2 turnos.\r\n"
+  damageBuff: 5
   damageDebuff: 0
   defenseBuff: 0
   defenseDebuff: 0
@@ -27,4 +27,6 @@ MonoBehaviour:
   cureDebuff: 0
   supremeBuff: 0
   supremeDebuff: 0
+  useBuff: 0
+  useDebuff: 0
   cardType: 2

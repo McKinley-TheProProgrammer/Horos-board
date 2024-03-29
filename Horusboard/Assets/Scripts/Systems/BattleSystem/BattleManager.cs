@@ -31,10 +31,13 @@ public class BattleManager : MonoBehaviour
     [SerializeField]
     public Transform[] enemyBattleStations;
 
+    [SerializeField] 
+    public List<RectTransform> cardSlots;
+    
     private UnitManager playerUnit, enemyUnit;
 
     [SerializeField]
-    private BoolReference playerActionMade;
+    private BoolReference playerAttackAction, playerDefenseAction;
     void Start()
     {
         state = GameStates.START;
@@ -50,20 +53,54 @@ public class BattleManager : MonoBehaviour
         enemyUnit = enemyGO.GetComponent<UnitManager>();
 
         state = GameStates.PLAYER_TURN;
-        PlayerTurn();
+        StartCoroutine(PlayerTurn());
     }
 
     void SetupEnemies(int amount)
     {
         for (int i = 0; i < amount; i++)
         {
-            
+            //Sets up the enemies
         }
     }
 
-    void PlayerTurn()
+    void SetupCards()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            //Sets up the Deck for the Player
+        }
+    }
+
+    IEnumerator PlayerTurn()
     {
         Debug.Log("Choose an action");
+
+        yield return new WaitUntil(() => playerAttackAction.Value || playerDefenseAction.Value);
+
+        if (playerAttackAction.Value)
+        {
+            PlayerAttack();
+        }
+        else if (playerDefenseAction.Value)
+        {
+            PlayerDefense();
+        }
+        
+        playerAttackAction.Value = false;
+        playerDefenseAction.Value = false;
+
+        state = GameStates.ENEMY_TURN;
+
+    }
+
+    IEnumerator EnemyTurn()
+    {
+        yield return new WaitForSeconds(2f);
+        
+        EnemyAttack();
+
+        state = GameStates.PLAYER_TURN;
     }
     void PlayerAttack()
     {

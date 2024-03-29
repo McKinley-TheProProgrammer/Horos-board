@@ -86,12 +86,27 @@ public class BattleManager : MonoBehaviour
         {
             PlayerDefense();
         }
-        
-        playerAttackAction.Value = false;
-        playerDefenseAction.Value = false;
+
+        if (playerUnit.isDead)
+        {
+            state = GameStates.LOSE;
+            Debug.Log("Nope, player Dead, u lose");
+            yield break;
+        }
+
+        if (enemyUnit.isDead)
+        {
+            state = GameStates.WIN;
+            Debug.Log("Imma be damned the game has been wooooun");
+            yield break;
+        }
+        // Set values to true to guarantee that the Player will not Fire an Input twice
+        // Put this in a ChangeState function
+        playerAttackAction.Value = true;
+        playerDefenseAction.Value = true;
 
         state = GameStates.ENEMY_TURN;
-
+        StartCoroutine(EnemyTurn());
     }
 
     IEnumerator EnemyTurn()
@@ -100,7 +115,13 @@ public class BattleManager : MonoBehaviour
         
         EnemyAttack();
 
+        // put this in a ChangeState function
         state = GameStates.PLAYER_TURN;
+        
+        playerAttackAction.Value = false;
+        playerDefenseAction.Value = false;
+
+        StartCoroutine(PlayerTurn());
     }
     void PlayerAttack()
     {

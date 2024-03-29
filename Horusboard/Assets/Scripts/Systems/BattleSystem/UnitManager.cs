@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
 using UnityEngine.Events;
@@ -9,7 +10,7 @@ public class UnitManager : MonoBehaviour
 {
     [SerializeField] 
     private UnitStatus unitStatus;
-    
+
     public void SetUnitStatus(UnitStatus unitStatus)
     {
         this.unitStatus = unitStatus;
@@ -61,11 +62,16 @@ public class UnitManager : MonoBehaviour
         Debug.Log($"Unit {gameObject.name} is Attacking");
         
         targetUnit.TakeDamage(unitStatus.damage);
+        //Will be removed
+        targetUnit.transform.DOPunchScale(Vector3.one * 1.1f, .4f);
+        
+        OnAttack?.Invoke();
     }
 
     public void Defend()
     {
         Debug.Log($"Unit {gameObject.name} is Defending");
+        OnDefense?.Invoke();
     }
 
     public void Heal()

@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 358796377495354125, guid: 65f02594b19560c4380c534cfde72773, type: 3}
+      propertyPath: m_Name
+      value: EnemySprite
+      objectReference: {fileID: 0}
     - target: {fileID: 1774102276449674835, guid: 65f02594b19560c4380c534cfde72773, type: 3}
       propertyPath: m_Size.x
       value: 0.96
@@ -23,10 +27,26 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7163343980367565575, guid: 65f02594b19560c4380c534cfde72773, type: 3}
+      propertyPath: _eventReference._event
+      value: 
+      objectReference: {fileID: 11400000, guid: 2b79b1b52052cdc49a6a6e8484c78014, type: 2}
+    - target: {fileID: 8166187958679537281, guid: 65f02594b19560c4380c534cfde72773, type: 3}
+      propertyPath: m_Name
+      value: EnemyDeath
+      objectReference: {fileID: 0}
     - target: {fileID: 9125740180719451362, guid: 65f02594b19560c4380c534cfde72773, type: 3}
       propertyPath: unitStatus
       value: 
       objectReference: {fileID: 11400000, guid: ff854f9bd8f6b4041bc38dcfd6309a6c, type: 2}
+    - target: {fileID: 9125740180719451362, guid: 65f02594b19560c4380c534cfde72773, type: 3}
+      propertyPath: isDead._usage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9125740180719451362, guid: 65f02594b19560c4380c534cfde72773, type: 3}
+      propertyPath: isDead._variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 6c7655a8e38c95147be3d586127e7e4e, type: 2}
     - target: {fileID: 9125740180719451363, guid: 65f02594b19560c4380c534cfde72773, type: 3}
       propertyPath: m_RootOrder
       value: 0

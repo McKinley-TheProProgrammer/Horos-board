@@ -380,6 +380,7 @@ MonoBehaviour:
   cardIcon: {fileID: 7107794791011940852}
   cardFullDescriptionBox: {fileID: 8464207663769314026}
   cardMiniDescriptionBox: {fileID: 2131009208168986861}
+  cardNameDisplay: {fileID: 4705267414943394366}
   cardMiniDescriptionDisplay: {fileID: 6965630777902176433}
   cardFullDescriptionDisplay: {fileID: 4743181356101705258}
   selected: 0
@@ -530,7 +531,7 @@ GameObject:
   - component: {fileID: 1712069004587697717}
   - component: {fileID: 4705267414943394366}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

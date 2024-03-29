@@ -15,7 +15,9 @@ MonoBehaviour:
   statusName: Enemy
   maxHP:
     _usage: 0
-    _value: 50
+    _value: 20
     _constant: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}
+  damage: 5
+  defense: 10

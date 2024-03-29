@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityAtoms.BaseAtoms;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class BattleManager : MonoBehaviour
 {
@@ -32,7 +32,9 @@ public class BattleManager : MonoBehaviour
     public Transform[] enemyBattleStations;
 
     private UnitManager playerUnit, enemyUnit;
-    
+
+    [SerializeField]
+    private BoolReference playerActionMade;
     void Start()
     {
         state = GameStates.START;
@@ -46,7 +48,35 @@ public class BattleManager : MonoBehaviour
 
         playerUnit = playerGO.GetComponent<UnitManager>();
         enemyUnit = enemyGO.GetComponent<UnitManager>();
-        
-        
+
+        state = GameStates.PLAYER_TURN;
+        PlayerTurn();
+    }
+
+    void SetupEnemies(int amount)
+    {
+        for (int i = 0; i < amount; i++)
+        {
+            
+        }
+    }
+
+    void PlayerTurn()
+    {
+        Debug.Log("Choose an action");
+    }
+    void PlayerAttack()
+    {
+        playerUnit.Attack(enemyUnit);
+    }
+
+    void PlayerDefense()
+    {
+        playerUnit.Defend();
+    }
+
+    void EnemyAttack()
+    {
+        enemyUnit.Attack(playerUnit);
     }
 }

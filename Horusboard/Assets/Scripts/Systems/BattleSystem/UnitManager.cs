@@ -25,18 +25,29 @@ public class UnitManager : MonoBehaviour
         OnCardAdded?.Invoke(cardData);
     }
 
+    public void RemoveCard(CardData cardData)
+    {
+        if (!cardsSelected.Contains(cardData))
+        {
+            Debug.LogError($"Card {cardData.name} not found");
+            return;
+        }
+
+        cardsSelected.Remove(cardData);
+    }
+
     public void ClearDeck()
     {
         cardsSelected.Clear();
     }
     public void Attack(UnitManager targetUnit)
     {
-        
+        Debug.Log($"Unit {gameObject.name} is Attacking");
     }
 
     public void Defend()
     {
-        
+        Debug.Log($"Unit {gameObject.name} is Defending");
     }
 
     public void Heal()

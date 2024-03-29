@@ -18,6 +18,8 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
 
         cardBG.sprite = cardData.cardBackground;
         cardIcon.sprite = cardData.cardIcon;
+
+        cardNameDisplay.text = cardData.cardName;
         cardMiniDescriptionDisplay.text = cardData.miniDescription;
         cardFullDescriptionDisplay.text = cardData.cardDescription;
         
@@ -57,7 +59,9 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
     private RectTransform cardFullDescriptionBox;
     [SerializeField] 
     private RectTransform cardMiniDescriptionBox;
-    
+
+    [SerializeField] 
+    private TextMeshProUGUI cardNameDisplay;
     [SerializeField] 
     private TextMeshProUGUI cardMiniDescriptionDisplay;
     [SerializeField] 
@@ -66,7 +70,6 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
     private Vector2 cardDescBox_Pos;
     
     public bool selected;
-    
     
     void Start()
     {
@@ -87,12 +90,5 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
         else
             cardFullDescriptionBox.DOAnchorPos(cardDescBox_Pos, .2f);
     }
-
-    // Uses the Card
-    public void Use()
-    {
-        
-    }
-    
     
 }

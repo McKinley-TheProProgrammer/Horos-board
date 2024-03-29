@@ -37,6 +37,11 @@ public class CardData : ScriptableObject
     [Header("Supreme Gauge Properties")]
     public int supremeBuff;
     public int supremeDebuff;
+
+    [SerializeField] 
+    public bool useBuff;
+    [SerializeField] 
+    public bool useDebuff;
     
     [SerializeField] 
     public CardType cardType;

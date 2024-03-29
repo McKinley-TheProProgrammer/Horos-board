@@ -16,13 +16,15 @@ MonoBehaviour:
   cardIcon: {fileID: 0}
   cardBackground: {fileID: 0}
   miniDescription: "ADV N\xC3O CURA (x3T)"
-  cardDescription: "Peixes possui 18 estrelas principais e \xE9 uma das maiores constela\xE7\xF5es
-    no c\xE9u, apesar do fraco brilho. \r\nEfeito:Seu advers\xE1rio fica incapaz
-    de se curar pelos pr\xF3ximos 3 turnos.\r\n"
+  cardDescription: "A constela\xE7\xE3o de Peixes possui 18 estrelas principais e
+    \xE9 uma das maiores constela\xE7\xF5es no c\xE9u, apesar do fraco brilho. \r\nEfeito:Seu
+    advers\xE1rio fica incapaz de se curar pelos pr\xF3ximos 3 turnos.\r\n"
   damageBuff: 0
   damageDebuff: 0
   defenseBuff: 0
   defenseDebuff: 0
   cureBuff: 0
   cureDebuff: 0
+  supremeBuff: 0
+  supremeDebuff: 0
   cardType: 0

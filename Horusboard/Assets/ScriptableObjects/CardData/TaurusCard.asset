@@ -16,12 +16,15 @@ MonoBehaviour:
   cardIcon: {fileID: 0}
   cardBackground: {fileID: 0}
   miniDescription: DEF +2
-  cardDescription: "Touro possui 19 estrelas principais e \xE9 uma das constela\xE7\xF5es
-    mais antigas a ser observada.\r\nEfeito: Voc\xEA ganha 2 pontos de defesa.\r\n"
+  cardDescription: "A constela\xE7\xE3o de Touro possui 19 estrelas principais e
+    \xE9 uma das constela\xE7\xF5es mais antigas a ser observada.\r\nEfeito: Voc\xEA
+    ganha 2 pontos de defesa.\r\n"
   damageBuff: 0
   damageDebuff: 0
   defenseBuff: 0
   defenseDebuff: 0
   cureBuff: 0
   cureDebuff: 0
+  supremeBuff: 0
+  supremeDebuff: 0
   cardType: 1

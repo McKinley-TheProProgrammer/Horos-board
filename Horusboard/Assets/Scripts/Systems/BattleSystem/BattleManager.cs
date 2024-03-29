@@ -20,7 +20,6 @@ public class BattleManager : MonoBehaviour
     [SerializeField]
     public List<CardData> cardDatas;
     
-    
     [SerializeField]
     public GameObject playerPrefab;
     [SerializeField]
@@ -31,7 +30,9 @@ public class BattleManager : MonoBehaviour
     
     [SerializeField]
     public Transform[] enemyBattleStations;
-	
+
+    private UnitManager playerUnit, enemyUnit;
+    
     void Start()
     {
         state = GameStates.START;
@@ -42,5 +43,10 @@ public class BattleManager : MonoBehaviour
     {
         GameObject playerGO = Instantiate(playerPrefab,playerBattleStation.position,Quaternion.identity);
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStations[Mathf.CeilToInt(enemyBattleStations.Length / 2)].position,Quaternion.identity);
+
+        playerUnit = playerGO.GetComponent<UnitManager>();
+        enemyUnit = enemyGO.GetComponent<UnitManager>();
+        
+        
     }
 }

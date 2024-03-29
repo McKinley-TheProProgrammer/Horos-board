@@ -16,13 +16,15 @@ MonoBehaviour:
   cardIcon: {fileID: 0}
   cardBackground: {fileID: 0}
   miniDescription: SUPREMO
-  cardDescription: "G\xEAmeos possui 8 estrelas principais e se destaca pela grande
-    quantidade de estrelas bin\xE1rias.\r\nEfeito: Ao usar essa carta, a sua habilidade
-    suprema poder\xE1 ser utilizada imediatamente.\r\n"
+  cardDescription: "A constela\xE7\xE3o de G\xEAmeos possui 8 estrelas principais
+    e se destaca pela grande quantidade de estrelas bin\xE1rias.\r\nEfeito: Ao usar
+    essa carta, a sua habilidade suprema poder\xE1 ser utilizada imediatamente.\r\n"
   damageBuff: 0
   damageDebuff: 0
   defenseBuff: 0
   defenseDebuff: 0
   cureBuff: 0
   cureDebuff: 0
+  supremeBuff: 0
+  supremeDebuff: 0
   cardType: 3

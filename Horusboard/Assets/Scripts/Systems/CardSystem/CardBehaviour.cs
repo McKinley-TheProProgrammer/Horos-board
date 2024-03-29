@@ -5,6 +5,7 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class CardBehaviour : MonoBehaviour, IPointerClickHandler
@@ -17,8 +18,9 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
 
         cardBG.sprite = cardData.cardBackground;
         cardIcon.sprite = cardData.cardIcon;
-        cardDescriptionDisplay.text = cardData.miniDescription;
-
+        cardMiniDescriptionDisplay.text = cardData.miniDescription;
+        cardFullDescriptionDisplay.text = cardData.cardDescription;
+        
         Color bgColor = Color.gray;
         
         switch (cardData.cardType)
@@ -48,12 +50,18 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
     private Image cardBG;
     [SerializeField]
     private Image cardIcon;
-
+    
+    
     [Header("Card Text Displays")]
     [SerializeField] 
-    private RectTransform cardDescriptionBox;
+    private RectTransform cardFullDescriptionBox;
     [SerializeField] 
-    private TextMeshProUGUI cardDescriptionDisplay;
+    private RectTransform cardMiniDescriptionBox;
+    
+    [SerializeField] 
+    private TextMeshProUGUI cardMiniDescriptionDisplay;
+    [SerializeField] 
+    private TextMeshProUGUI cardFullDescriptionDisplay;
     
     private Vector2 cardDescBox_Pos;
     
@@ -65,7 +73,7 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
         if (cardTransform == null)
             cardTransform = GetComponent<RectTransform>();
 
-        cardDescBox_Pos = cardDescriptionBox.anchoredPosition;
+        cardDescBox_Pos = cardFullDescriptionBox.anchoredPosition;
         
         SetCardData(cardData);
     }
@@ -75,9 +83,9 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
         selected = !selected;
 
         if(selected)
-            cardDescriptionBox.DOAnchorPosX(-cardTransform.sizeDelta.x, .2f).SetRelative(true);
+            cardFullDescriptionBox.DOAnchorPosX(-cardTransform.sizeDelta.x, .2f).SetRelative(true);
         else
-            cardDescriptionBox.DOAnchorPos(cardDescBox_Pos, .2f);
+            cardFullDescriptionBox.DOAnchorPos(cardDescBox_Pos, .2f);
     }
 
     // Uses the Card

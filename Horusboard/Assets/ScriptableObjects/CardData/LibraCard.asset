@@ -16,13 +16,15 @@ MonoBehaviour:
   cardIcon: {fileID: 0}
   cardBackground: {fileID: 0}
   miniDescription: SUP +4
-  cardDescription: "Libra possui 6 estrelas principais e \xE9 a \xFAnica constela\xE7\xE3o
-    do zod\xEDaco nomeada por um objeto.\r\nEfeito: O carregamento da sua suprema
-    sobe em + 4 pontos.\r\n"
+  cardDescription: "A constela\xE7\xE3o de Libra possui 6 estrelas principais e \xE9
+    a \xFAnica constela\xE7\xE3o do zod\xEDaco nomeada por um objeto.\r\nEfeito:
+    O carregamento da sua suprema sobe em + 4 pontos.\r\n"
   damageBuff: 0
   damageDebuff: 0
   defenseBuff: 0
   defenseDebuff: 0
   cureBuff: 0
   cureDebuff: 0
+  supremeBuff: 0
+  supremeDebuff: 0
   cardType: 3

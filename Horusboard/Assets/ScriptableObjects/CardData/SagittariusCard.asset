@@ -16,13 +16,15 @@ MonoBehaviour:
   cardIcon: {fileID: 0}
   cardBackground: {fileID: 0}
   miniDescription: 2x ATQ (x2)
-  cardDescription: "Sagit\xE1rio possui 20 estrelas principais e se destaca por ter
-    dois modelos de desenho da constela\xE7\xE3o \r\nEfeito:Flechas s\xE3o atiradas
-    no inimigo, em um ataque igual ao dobro do seu ataque.\r\n"
+  cardDescription: "A constela\xE7\xE3o de Sagit\xE1rio possui 20 estrelas principais
+    e se destaca por ter dois modelos de desenho da constela\xE7\xE3o \r\nEfeito:Flechas
+    s\xE3o atiradas no inimigo, em um ataque igual ao dobro do seu ataque.\r\n"
   damageBuff: 0
   damageDebuff: 0
   defenseBuff: 0
   defenseDebuff: 0
   cureBuff: 0
   cureDebuff: 0
+  supremeBuff: 0
+  supremeDebuff: 0
   cardType: 2

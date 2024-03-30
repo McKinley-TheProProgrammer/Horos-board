@@ -53,7 +53,6 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
     [SerializeField]
     private Image cardIcon;
     
-    
     [Header("Card Text Displays")]
     [SerializeField] 
     private RectTransform cardFullDescriptionBox;
@@ -68,6 +67,9 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
     private TextMeshProUGUI cardFullDescriptionDisplay;
     
     private Vector2 cardDescBox_Pos;
+
+    [SerializeField] 
+    public Image selectedCardOutline;
     
     public bool selected;
 
@@ -91,11 +93,13 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
         if (selected)
         {
             cardFullDescriptionBox.DOAnchorPosX(-205, .2f).SetRelative(true);
+            selectedCardOutline.DOFade(1, .2f);
             playerUnit.AddCard(cardData);
         }
         else
         {
             cardFullDescriptionBox.DOAnchorPos(cardDescBox_Pos, .2f);
+            selectedCardOutline.DOFade(0, .2f);
             playerUnit.RemoveCard(cardData);
         }
 

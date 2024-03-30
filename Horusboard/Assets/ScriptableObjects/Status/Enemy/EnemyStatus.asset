@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statusName: Gaia
   maxHP:
-    _usage: 2
+    _usage: 1
     _value: 20
-    _constant: {fileID: 0}
+    _constant: {fileID: 11400000, guid: 21d8d05a27b58634b877e50c0d0aae58, type: 2}
     _variable: {fileID: 11400000, guid: 1c1fd68ef661d1148b4f53ff724c1802, type: 2}
     _variableInstancer: {fileID: 0}
   damage: 5

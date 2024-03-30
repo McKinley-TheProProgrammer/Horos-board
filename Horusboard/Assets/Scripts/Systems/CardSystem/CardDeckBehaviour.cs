@@ -11,6 +11,7 @@ public class CardDeckBehaviour : MonoBehaviour
     {
         foreach (var card in cards)
         {
+            card.selected = false;
             card.selectedCardOutline.DOFade(amount,.2f);
         }
     }

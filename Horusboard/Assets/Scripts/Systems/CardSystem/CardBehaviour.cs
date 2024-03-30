@@ -109,7 +109,9 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
         {
             cardFullDescriptionBox.DOAnchorPosX(-(200 + xPositionToGo), .2f).SetRelative(true);
             cardTextBG.DOSizeDelta(new Vector2(xPositionToGo, cardTextBG.sizeDelta.y), .2f);
-                
+
+            cardFullDescriptionDisplay.DOFade(1f, .2f);
+            
             selectedCardOutline.DOFade(1, .2f);
             playerUnit.AddCard(cardData);
             
@@ -121,6 +123,8 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
         else
         {
             ReturnCardBGToPosition();
+
+            cardFullDescriptionDisplay.DOFade(0f, .2f);
             
             selectedCardOutline.DOFade(0, .2f);
             playerUnit.RemoveCard(cardData);

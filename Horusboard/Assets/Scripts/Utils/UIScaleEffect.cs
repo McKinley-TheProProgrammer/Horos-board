@@ -17,7 +17,7 @@ public class UIScaleEffect : MonoBehaviour
 
     public void Scale()
     {
-        if (scaleSequence != null && scaleSequence.IsPlaying())
+        if (scaleSequence != null && scaleSequence.IsActive())
         {
             return;
         }
@@ -28,12 +28,12 @@ public class UIScaleEffect : MonoBehaviour
         if (loopBack)
             scaleSequence.SetLoops(2, LoopType.Yoyo);
         
-        scaleSequence?.Play();
+        scaleSequence?.Play().SetUpdate(true);
     }
 
     public void Scale(int amount)
     {
-        if (scaleSequence != null && scaleSequence.IsPlaying())
+        if (scaleSequence != null && scaleSequence.IsActive())
         {
             return;
         }
@@ -44,6 +44,6 @@ public class UIScaleEffect : MonoBehaviour
         if (loopBack)
             scaleSequence.SetLoops(2, LoopType.Yoyo);
         
-        scaleSequence?.Play();
+        scaleSequence?.Play().SetUpdate(true);
     }
 }

@@ -14,7 +14,14 @@ public class CardDeckBehaviour : MonoBehaviour
             card.selectedCardOutline.DOFade(amount,.2f);
         }
     }
-    
+
+    public void ReturnCardBGsToPos()
+    {
+        foreach (var card in cards)
+        {
+            card.ReturnCardBGToPosition();
+        }
+    }
     public void OnSelectionEnter(CardBehaviour card)
     {
         

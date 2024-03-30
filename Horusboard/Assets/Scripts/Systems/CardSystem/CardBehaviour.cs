@@ -94,6 +94,11 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
         SetCardData(cardData);
     }
 
+    public void ReturnCardBGToPosition()
+    {
+        cardFullDescriptionBox.DOAnchorPos(cardDescBox_Pos, .2f);
+        cardTextBG.DOSizeDelta(cardTextBG_sizeDelta, .2f);
+    }
     public void OnPointerClick(PointerEventData eventData)
     {
         selected = !selected;
@@ -114,8 +119,7 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
         }
         else
         {
-            cardFullDescriptionBox.DOAnchorPos(cardDescBox_Pos, .2f);
-            cardTextBG.DOSizeDelta(cardTextBG_sizeDelta, .2f);
+            ReturnCardBGToPosition();
             
             selectedCardOutline.DOFade(0, .2f);
             playerUnit.RemoveCard(cardData);

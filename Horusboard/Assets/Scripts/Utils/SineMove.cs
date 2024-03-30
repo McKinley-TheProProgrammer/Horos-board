@@ -9,6 +9,8 @@ public class SineMove : MonoBehaviour
     // Update is called once per frame
     private Vector2 startPos;
 
+    public bool invert;
+    
     private void Start()
     {
         startPos = transform.position;
@@ -17,7 +19,10 @@ public class SineMove : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        
-        transform.position = Vector3.up * Mathf.Sin(time);
+
+        transform.position = new Vector3(
+            transform.position.x, 
+            (!invert ? Mathf.Sin(time) : Mathf.Cos(time)), 
+            transform.position.z);
     }
 }

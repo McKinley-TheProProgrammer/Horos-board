@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityAtoms.BaseAtoms;
@@ -39,12 +40,20 @@ public class BattleManager : MonoBehaviour
     
     [SerializeField]
     private BoolReference playerAttackAction, playerDefenseAction;
+
+    [SerializeField] private Sound battleTheme;
     void Awake()
     {
         state = GameStates.START;
         SetupBattle();
     }
-	
+
+    private void Start()
+    {
+        AudioManager.Instance.Play(battleTheme);
+    }
+    
+
     void SetupBattle()
     {
         GameObject playerGO = Instantiate(playerPrefab,playerBattleStation.position,Quaternion.identity);

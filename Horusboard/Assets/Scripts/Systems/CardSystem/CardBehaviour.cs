@@ -101,7 +101,7 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
         float xPositionToGo = cardTextBG.sizeDelta.x + 48f;
         if (selected)
         {
-            cardFullDescriptionBox.DOAnchorPosX(-(205 + xPositionToGo), .2f).SetRelative(true);
+            cardFullDescriptionBox.DOAnchorPosX(-(200 + xPositionToGo), .2f).SetRelative(true);
             cardTextBG.DOSizeDelta(new Vector2(xPositionToGo, cardTextBG.sizeDelta.y), .2f);
                 
             selectedCardOutline.DOFade(1, .2f);

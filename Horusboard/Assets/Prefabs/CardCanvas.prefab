@@ -497,6 +497,7 @@ GameObject:
   - component: {fileID: 4184440333921624959}
   - component: {fileID: 2989824698579602093}
   - component: {fileID: 5858245314193802910}
+  - component: {fileID: 478172989198653552}
   m_Layer: 5
   m_Name: AttackButton
   m_TagString: Untagged
@@ -631,6 +632,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &478172989198653552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6962878842638437023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8bbdcf078a437c4d8939c689c6c5588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformToScale: {fileID: 9039404857943921441}
+  scaleAmount: 1.1
+  duration: 0.2
 --- !u!1 &7174919576029895982
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,6 +905,7 @@ GameObject:
   - component: {fileID: 3311773901660886062}
   - component: {fileID: 622772182877012953}
   - component: {fileID: 3734036339527572852}
+  - component: {fileID: 1058087587903707136}
   m_Layer: 5
   m_Name: DefendButton
   m_TagString: Untagged
@@ -1023,6 +1040,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &1058087587903707136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8135784810301935888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8bbdcf078a437c4d8939c689c6c5588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformToScale: {fileID: 1352844907668354858}
+  scaleAmount: 1.1
+  duration: 0.2
 --- !u!1 &8183661353266237497
 GameObject:
   m_ObjectHideFlags: 0

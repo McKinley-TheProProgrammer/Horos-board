@@ -8,7 +8,7 @@ public class ChangeSceneSystem : MonoBehaviour
 
     public void LoadScene(int buildIndex)
     {
-        
+        StartCoroutine(LoadingScene(buildIndex));
     }
 
     IEnumerator LoadingScene(int buildIndex)

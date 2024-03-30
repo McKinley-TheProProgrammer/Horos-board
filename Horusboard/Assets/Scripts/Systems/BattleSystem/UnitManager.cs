@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Unity.VisualScripting;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,22 +15,29 @@ public class UnitManager : MonoBehaviour
     public void SetUnitStatus(UnitStatus unitStatus)
     {
         this.unitStatus = unitStatus;
-        currentHP = unitStatus.maxHP;
+        currentHP.Value = unitStatus.maxHP;
+        currentDamage = unitStatus.damage;
+        currentDefense = unitStatus.defense;
     }
     
     [SerializeField]
     public List<CardData> cardsSelected;
 
-    public UnityEvent OnAttack, OnDefense;
+    public UnityEvent<int> OnDamageTaken;
+    
+    public UnityEvent<UnitManager> OnAttack, OnDefense;
     
     public UnityEvent<CardData> OnCardAdded;
     
-    private int currentHP;
-
+    [SerializeField]
+    private IntVariable currentHP;
+    private int currentDamage;
+    private float currentDefense;
+    
     public BoolReference isDead;
     private void Start()
     {
-        currentHP = unitStatus.maxHP.Value;
+        SetUnitStatus(unitStatus);
     }
 
     public void AddCard(CardData cardData)
@@ -60,18 +68,60 @@ public class UnitManager : MonoBehaviour
     public void Attack(UnitManager targetUnit)
     {
         Debug.Log($"Unit {gameObject.name} is Attacking");
+
+        float damageAmount = unitStatus.damage;
+        float enemyDamageLoss = targetUnit.unitStatus.damage;
         
-        targetUnit.TakeDamage(unitStatus.damage);
-        //Will be removed
-        targetUnit.transform.DOPunchScale(Vector3.one * 1.1f, .4f);
+        foreach (var cardData in cardsSelected)
+        {
+            if (cardData.useBuff)
+            {
+                damageAmount += cardData.damageBuff;
+            }
+            else if (cardData.useDebuff)
+            {
+                enemyDamageLoss -= cardData.damageDebuff;
+            }
+            else
+            {
+                damageAmount += cardData.supremeBuff;
+                enemyDamageLoss -= cardData.supremeDebuff;
+            }
+        }
         
-        OnAttack?.Invoke();
+        targetUnit.TakeDamage(Mathf.RoundToInt(damageAmount));
+        
+        targetUnit.LoseDamage(Mathf.RoundToInt(enemyDamageLoss));
+        
+        OnAttack?.Invoke(targetUnit);
     }
 
-    public void Defend()
+    public void Defend(UnitManager defendingFrom)
     {
         Debug.Log($"Unit {gameObject.name} is Defending");
-        OnDefense?.Invoke();
+        
+        float defenseAmount = unitStatus.defense;
+        float enemyDamageLoss = defendingFrom.unitStatus.defense;
+        
+        foreach (var cardData in cardsSelected)
+        {
+            if (cardData.useBuff)
+            {
+                defenseAmount += cardData.damageBuff;
+            }
+            else if (cardData.useDebuff)
+            {
+                enemyDamageLoss -= cardData.damageDebuff;
+            }
+            else
+            {
+                defenseAmount += cardData.supremeBuff;
+                enemyDamageLoss -= cardData.supremeDebuff;
+            }
+        }
+        
+        
+        OnDefense?.Invoke(this);
     }
 
     public void Heal()
@@ -86,17 +136,35 @@ public class UnitManager : MonoBehaviour
     
     public void TakeDamage(int damageAmount)
     {
-        if (currentHP <= 0)
+        if (currentHP.Value <= 0)
         {
             return;
         }
         
-        currentHP -= damageAmount;
-        if (currentHP <= 0)
+        currentHP.Value -= damageAmount;
+        
+        if (currentHP.Value <= 0)
         {
             Debug.Log($"{gameObject.name} is DEAD");
             isDead.Value = true;
         }
+        
+        OnDamageTaken?.Invoke(damageAmount);
+    }
+
+    public void LoseDamage(int damageAmount)
+    {
+        if (currentDamage <= 0)
+        {
+            return;
+        }
+
+        currentDamage -= damageAmount;
+    }
+
+    public void RegainDefense()
+    {
+        currentDefense = unitStatus.defense;
     }
 
 }

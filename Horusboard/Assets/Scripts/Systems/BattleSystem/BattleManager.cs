@@ -35,10 +35,11 @@ public class BattleManager : MonoBehaviour
     public List<RectTransform> cardSlots;
     
     private UnitManager playerUnit, enemyUnit;
-
+    private int enemyAction; // 0 Attacks, 1 Defends, 2 Heal
+    
     [SerializeField]
     private BoolReference playerAttackAction, playerDefenseAction;
-    void Start()
+    void Awake()
     {
         state = GameStates.START;
         SetupBattle();
@@ -130,11 +131,16 @@ public class BattleManager : MonoBehaviour
 
     void PlayerDefense()
     {
-        playerUnit.Defend();
+        playerUnit.Defend(enemyUnit);
     }
 
     void EnemyAttack()
     {
         enemyUnit.Attack(playerUnit);
+    }
+
+    void EnemyDefense()
+    {
+        enemyUnit.Defend(playerUnit);
     }
 }

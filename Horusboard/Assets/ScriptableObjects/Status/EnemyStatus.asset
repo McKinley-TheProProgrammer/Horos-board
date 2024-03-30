@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statusName: Enemy
   maxHP:
-    _usage: 0
+    _usage: 2
     _value: 20
     _constant: {fileID: 0}
-    _variable: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 1c1fd68ef661d1148b4f53ff724c1802, type: 2}
     _variableInstancer: {fileID: 0}
   damage: 5
   defense: 10

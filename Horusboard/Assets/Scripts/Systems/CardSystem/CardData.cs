@@ -10,6 +10,11 @@ public enum CardType
     FIRE,
     AIR
 }
+
+public enum SignType
+{
+    
+}
 [CreateAssetMenu(menuName = "Card")]
 public class CardData : ScriptableObject
 {
@@ -45,5 +50,8 @@ public class CardData : ScriptableObject
     
     [SerializeField] 
     public CardType cardType;
-    
+
+    //[SerializeField]
+    //public SignType signType;
+
 }

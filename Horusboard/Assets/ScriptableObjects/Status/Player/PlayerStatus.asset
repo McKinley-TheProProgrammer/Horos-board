@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statusName: Player
   maxHP:
-    _usage: 2
+    _usage: 1
     _value: 0
-    _constant: {fileID: 0}
+    _constant: {fileID: 11400000, guid: 9d4205b67e1945d4389a4455112e051d, type: 2}
     _variable: {fileID: 11400000, guid: addbcfee969cf024bb218e4b20136e23, type: 2}
     _variableInstancer: {fileID: 0}
+  damage: 5
+  defense: 20

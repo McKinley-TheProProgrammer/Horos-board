@@ -99,6 +99,7 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
         cardFullDescriptionBox.DOAnchorPos(cardDescBox_Pos, .2f);
         cardTextBG.DOSizeDelta(cardTextBG_sizeDelta, .2f);
     }
+    
     public void OnPointerClick(PointerEventData eventData)
     {
         selected = !selected;

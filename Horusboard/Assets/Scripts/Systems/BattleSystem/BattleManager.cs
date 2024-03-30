@@ -28,6 +28,9 @@ public class BattleManager : MonoBehaviour
     
     [SerializeField]
     public List<CardData> cardDatas;
+
+    [SerializeField] 
+    public UIMoveToEffect cardDeckGroup;
     
     [SerializeField]
     public GameObject playerPrefab;
@@ -92,6 +95,8 @@ public class BattleManager : MonoBehaviour
     {
         Debug.Log("Choose an action");
 
+        cardDeckGroup.MoveBack();
+        
         yield return new WaitUntil(() => playerAttackAction.Value || playerDefenseAction.Value);
 
         if (playerAttackAction.Value)

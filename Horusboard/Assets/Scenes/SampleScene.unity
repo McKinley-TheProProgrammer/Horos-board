@@ -349,6 +349,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758391383}
   m_CullTransparentMesh: 1
+--- !u!114 &1016080197 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7596119962856550339, guid: 189c526aac519b04188075a0abaf5880, type: 3}
+  m_PrefabInstance: {fileID: 8183661351978532954}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed19925daa411f4b88f5508f7ca3107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1366403839
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,6 +1274,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 18.800003
       objectReference: {fileID: 0}
+    - target: {fileID: 8452413009181668392, guid: 1be9de75e53dfd4419dc73ec6288e788, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 108.98999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8452413009181668392, guid: 1be9de75e53dfd4419dc73ec6288e788, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -38.618713
+      objectReference: {fileID: 0}
     - target: {fileID: 8452413009432734468, guid: 1be9de75e53dfd4419dc73ec6288e788, type: 3}
       propertyPath: m_Name
       value: HUDCanvas
@@ -1446,6 +1465,10 @@ PrefabInstance:
       propertyPath: endGameUI
       value: 
       objectReference: {fileID: 8452413009455154201}
+    - target: {fileID: 8944434716867044543, guid: fe463657d915fe4479f60bf9da3d70f6, type: 3}
+      propertyPath: cardDeckGroup
+      value: 
+      objectReference: {fileID: 1016080197}
     - target: {fileID: 8944434716867044543, guid: fe463657d915fe4479f60bf9da3d70f6, type: 3}
       propertyPath: endTextDisplay
       value: 

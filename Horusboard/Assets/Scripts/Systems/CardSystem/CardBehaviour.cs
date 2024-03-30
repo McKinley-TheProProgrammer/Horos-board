@@ -56,9 +56,12 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
     [Header("Card Text Displays")]
     [SerializeField] 
     private RectTransform cardFullDescriptionBox;
+    private RectTransform cardTextBG;
+    private Vector2 cardTextBG_sizeDelta;
+    
     [SerializeField] 
     private RectTransform cardMiniDescriptionBox;
-
+    
     [SerializeField] 
     private TextMeshProUGUI cardNameDisplay;
     [SerializeField] 
@@ -73,6 +76,9 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
     
     public bool selected;
 
+    [SerializeField] 
+    private Sound[] selectedSoundSFXs, unselectedSFXs;
+    
     private UnitManager playerUnit;
     void Start()
     {
@@ -82,6 +88,8 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
             cardTransform = GetComponent<RectTransform>();
 
         cardDescBox_Pos = cardFullDescriptionBox.anchoredPosition;
+        cardTextBG = cardFullDescriptionBox.GetChild(0).GetComponent<RectTransform>();
+        cardTextBG_sizeDelta = cardTextBG.sizeDelta;
         
         SetCardData(cardData);
     }
@@ -90,17 +98,33 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
     {
         selected = !selected;
 
+        float xPositionToGo = cardTextBG.sizeDelta.x + 48f;
         if (selected)
         {
-            cardFullDescriptionBox.DOAnchorPosX(-205, .2f).SetRelative(true);
+            cardFullDescriptionBox.DOAnchorPosX(-(205 + xPositionToGo), .2f).SetRelative(true);
+            cardTextBG.DOSizeDelta(new Vector2(xPositionToGo, cardTextBG.sizeDelta.y), .2f);
+                
             selectedCardOutline.DOFade(1, .2f);
             playerUnit.AddCard(cardData);
+            
+            foreach (var sound in selectedSoundSFXs)
+            {
+                AudioManager.Instance.Play(sound);
+            }
         }
         else
         {
             cardFullDescriptionBox.DOAnchorPos(cardDescBox_Pos, .2f);
+            cardTextBG.DOSizeDelta(cardTextBG_sizeDelta, .2f);
+            
             selectedCardOutline.DOFade(0, .2f);
             playerUnit.RemoveCard(cardData);
+            
+            foreach (var sound in unselectedSFXs)
+            {
+                AudioManager.Instance.Play(sound);
+            }
+            
         }
 
         

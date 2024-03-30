@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BOTAO_02
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
-  audioClip: {fileID: 8300000, guid: 02521939e4a56064598e0a5ecd609ba6, type: 3}
+  audioClip: {fileID: 8300000, guid: 4edc352005899d341aa5b7ef3780b6e3, type: 3}
   volume: 1
   pitch: 1
   loop: 0

@@ -462,6 +462,12 @@ MonoBehaviour:
   cardFullDescriptionDisplay: {fileID: 4743181356101705258}
   selectedCardOutline: {fileID: 1351482267072038052}
   selected: 0
+  selectedSoundSFXs:
+  - {fileID: 11400000, guid: 450457c0c09d44c4bafb6f361f1391c8, type: 2}
+  - {fileID: 11400000, guid: 0847e94044935cf45bba30c5cb0eba01, type: 2}
+  unselectedSFXs:
+  - {fileID: 11400000, guid: 479f93e7d0c59104c8f49c0caf89ae5d, type: 2}
+  - {fileID: 11400000, guid: 2b752ffbded9c6e44ae9853430547936, type: 2}
 --- !u!1 &3990192365598004771
 GameObject:
   m_ObjectHideFlags: 0

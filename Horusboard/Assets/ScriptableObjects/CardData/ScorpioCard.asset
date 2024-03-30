@@ -19,12 +19,14 @@ MonoBehaviour:
   cardDescription: "A constela\xE7\xE3o de Escorpi\xE3o possui 18 estrelas principais
     e \xE9 uma das constela\xE7\xF5es mais brilhantes do zod\xEDaco.\r\nEfeito: Seu
     advers\xE1rio \xE9 afetado por veneno, perdendo 4 pontos de VIDA por 3 turnos.\r\n"
-  damageBuff: 0
+  damageBuff: 4
   damageDebuff: 0
   defenseBuff: 0
   defenseDebuff: 0
   cureBuff: 0
   cureDebuff: 0
-  supremeBuff: 0
+  supremeBuff: 4
   supremeDebuff: 0
+  useBuff: 1
+  useDebuff: 0
   cardType: 0

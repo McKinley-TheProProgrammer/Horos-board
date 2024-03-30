@@ -27,4 +27,6 @@ MonoBehaviour:
   cureDebuff: 0
   supremeBuff: 0
   supremeDebuff: 0
+  useBuff: 1
+  useDebuff: 0
   cardType: 0

@@ -88,12 +88,18 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
     {
         selected = !selected;
 
-        if(selected)
+        if (selected)
+        {
             cardFullDescriptionBox.DOAnchorPosX(-205, .2f).SetRelative(true);
+            playerUnit.AddCard(cardData);
+        }
         else
+        {
             cardFullDescriptionBox.DOAnchorPos(cardDescBox_Pos, .2f);
+            playerUnit.RemoveCard(cardData);
+        }
+
         
-        playerUnit.AddCard(cardData);
     }
     
 }

@@ -9,8 +9,7 @@ using UnityEngine.Events;
 
 public class UnitManager : MonoBehaviour
 {
-    [SerializeField] 
-    private UnitStatus unitStatus;
+    [SerializeField] private UnitStatus unitStatus;
 
     public void SetUnitStatus(UnitStatus unitStatus)
     {
@@ -19,22 +18,21 @@ public class UnitManager : MonoBehaviour
         currentDamage = unitStatus.damage;
         currentDefense = unitStatus.defense;
     }
-    
-    [SerializeField]
-    public List<CardData> cardsSelected;
+
+    [SerializeField] public List<CardData> cardsSelected;
 
     public UnityEvent<int> OnDamageTaken;
-    
+
     public UnityEvent<UnitManager> OnAttack, OnDefense;
-    
+
     public UnityEvent<CardData> OnCardAdded;
-    
-    [SerializeField]
-    private IntVariable currentHP;
+
+    [SerializeField] private IntVariable currentHP;
     private int currentDamage;
     private float currentDefense;
-    
+
     public BoolReference isDead;
+
     private void Start()
     {
         SetUnitStatus(unitStatus);
@@ -42,11 +40,11 @@ public class UnitManager : MonoBehaviour
 
     public void AddCard(CardData cardData)
     {
-        if(cardsSelected.Contains(cardData))
+        if (cardsSelected.Contains(cardData))
             return;
-        
+
         cardsSelected.Add(cardData);
-        
+
         OnCardAdded?.Invoke(cardData);
     }
 
@@ -65,13 +63,14 @@ public class UnitManager : MonoBehaviour
     {
         cardsSelected.Clear();
     }
+
     public void Attack(UnitManager targetUnit)
     {
         Debug.Log($"Unit {gameObject.name} is Attacking");
 
         float damageAmount = unitStatus.damage;
         float enemyDamageLoss = targetUnit.unitStatus.damage;
-        
+        //buffing the defense
         foreach (var cardData in cardsSelected)
         {
             if (cardData.useBuff)
@@ -84,25 +83,27 @@ public class UnitManager : MonoBehaviour
             }
             else
             {
-                damageAmount += cardData.supremeBuff;
-                enemyDamageLoss -= cardData.supremeDebuff;
+                damageAmount *= 2;
+                enemyDamageLoss *= 2;
             }
         }
-        
+
+        currentDamage = (int)damageAmount;
+
         targetUnit.TakeDamage(Mathf.RoundToInt(damageAmount));
-        
+
         targetUnit.LoseDamage(Mathf.RoundToInt(enemyDamageLoss));
-        
+
         OnAttack?.Invoke(targetUnit);
     }
 
     public void Defend(UnitManager defendingFrom)
     {
         Debug.Log($"Unit {gameObject.name} is Defending");
-        
+
         float defenseAmount = unitStatus.defense;
-        float enemyDamageLoss = defendingFrom.unitStatus.defense;
-        
+        float defenseLost = defendingFrom.unitStatus.defense;
+
         foreach (var cardData in cardsSelected)
         {
             if (cardData.useBuff)
@@ -111,50 +112,52 @@ public class UnitManager : MonoBehaviour
             }
             else if (cardData.useDebuff)
             {
-                enemyDamageLoss -= cardData.damageDebuff;
+                defenseLost -= cardData.damageDebuff;
             }
             else
             {
                 defenseAmount += cardData.supremeBuff;
-                enemyDamageLoss -= cardData.supremeDebuff;
+                defenseLost -= cardData.supremeDebuff;
             }
         }
-        
+
+        currentDefense += defenseAmount;
+        defendingFrom.LoseDefense(Mathf.RoundToInt(defenseLost));
         
         OnDefense?.Invoke(this);
     }
 
     public void Heal()
     {
-        
+
     }
-    
+
     public void Supreme()
     {
-        
+
     }
-    
+
     public void TakeDamage(int damageAmount)
     {
         if (currentHP.Value <= 0)
         {
             return;
         }
-        
+
         currentHP.Value -= damageAmount;
-        
+
         if (currentHP.Value <= 0)
         {
             Debug.Log($"{gameObject.name} is DEAD");
             isDead.Value = true;
         }
-        
+
         OnDamageTaken?.Invoke(damageAmount);
     }
 
     public void LoseDamage(int damageAmount)
     {
-        if (currentDamage <= 0)
+        if (currentDamage <= 2)
         {
             return;
         }
@@ -162,6 +165,20 @@ public class UnitManager : MonoBehaviour
         currentDamage -= damageAmount;
     }
 
+    public void LoseDefense(int defenseAmount)
+    {
+        if (currentDefense <= 2)
+        {
+            return;
+        }
+
+        currentDefense -= defenseAmount;
+    }
+
+    public void RegainAttack()
+    {
+        currentDamage = unitStatus.damage;
+    }
     public void RegainDefense()
     {
         currentDefense = unitStatus.defense;

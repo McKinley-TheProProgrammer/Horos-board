@@ -15,10 +15,10 @@ MonoBehaviour:
   cardName: Aquarius
   cardIcon: {fileID: 0}
   cardBackground: {fileID: 0}
-  miniDescription: ADV SUP -5 (BOSS)
+  miniDescription: ADV SUP -5
   cardDescription: "A constela\xE7\xE3o de Aqu\xE1rio possui 14 estrelas principais
-    e foi identificado inicialmente na Babil\xF4nia.\r\nEfeito: Carta exclusiva para
-    Boss. Abaixa os pontos de Suprema do boss em 5.\r\n\r\n"
+    e foi identificado inicialmente na Babil\xF4nia.\r\nEfeito: Abaixa os pontos
+    de Suprema do inimigo em 5.\r\n\r\n"
   damageBuff: 0
   damageDebuff: 5
   defenseBuff: 0
@@ -27,4 +27,6 @@ MonoBehaviour:
   cureDebuff: 0
   supremeBuff: 0
   supremeDebuff: 0
+  useBuff: 0
+  useDebuff: 1
   cardType: 3

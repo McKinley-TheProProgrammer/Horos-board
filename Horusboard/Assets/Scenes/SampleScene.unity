@@ -773,7 +773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8183661353430671054, guid: 189c526aac519b04188075a0abaf5880, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8183661353430671054, guid: 189c526aac519b04188075a0abaf5880, type: 3}
       propertyPath: m_AnchorMax.x
@@ -900,6 +900,10 @@ PrefabInstance:
       propertyPath: _replayEventBufferOnRegister
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6613861637629930749, guid: 1be9de75e53dfd4419dc73ec6288e788, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8452413009432734468, guid: 1be9de75e53dfd4419dc73ec6288e788, type: 3}
       propertyPath: m_Name
       value: HUDCanvas
@@ -918,7 +922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8452413009432734520, guid: 1be9de75e53dfd4419dc73ec6288e788, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8452413009432734520, guid: 1be9de75e53dfd4419dc73ec6288e788, type: 3}
       propertyPath: m_AnchorMax.x

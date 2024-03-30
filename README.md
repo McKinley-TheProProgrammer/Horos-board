@@ -1,7 +1,7 @@
 # Horos-board
 Repositório do Jogo de Cartas Horos⭐board, pela CosmicFox e Itsy Bitsy
 
-VERSÃO DA UNITY: <p style="color:rgb(255,90,80)">2021.3.36f1(LFS)</p>
+VERSÃO DA UNITY: <p style="color:rgb(255,90,80)">2021.3.31f1(LFS)</p>
 
 <b>Temática:</b>
 Horos✰board é um Jogo de Estratégia de Cartas sobre Signos, Constelações e Mitologia Romana. O jogo apresenta a astrologia e os conceitos de espiritualidade de uma maneira lúdica e divertida, visando as formas em que podemos apresentar a astronomia.

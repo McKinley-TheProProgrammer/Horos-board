@@ -68,7 +68,7 @@ public class UnitManager : MonoBehaviour
     {
         Debug.Log($"Unit {gameObject.name} is Attacking");
 
-        float damageAmount = unitStatus.damage;
+        float damageAmount = currentDamage;
         float enemyDamageLoss = targetUnit.unitStatus.damage;
         //buffing the defense
         foreach (var cardData in cardsSelected)
@@ -101,7 +101,7 @@ public class UnitManager : MonoBehaviour
     {
         Debug.Log($"Unit {gameObject.name} is Defending");
 
-        float defenseAmount = unitStatus.defense;
+        float defenseAmount = currentDefense;
         float defenseLost = defendingFrom.unitStatus.defense;
 
         foreach (var cardData in cardsSelected)
@@ -122,6 +122,7 @@ public class UnitManager : MonoBehaviour
         }
 
         currentDefense += defenseAmount;
+        
         defendingFrom.LoseDefense(Mathf.RoundToInt(defenseLost));
         
         OnDefense?.Invoke(this);
@@ -155,6 +156,23 @@ public class UnitManager : MonoBehaviour
         OnDamageTaken?.Invoke(damageAmount);
     }
 
+    public void AddDamage(int damage)
+    {
+        if(currentDamage >= 10)
+            return;
+        
+        currentDamage += damage;
+    }
+
+    public void AddDefense(int defense)
+    {
+        if (currentDefense >= 10)
+        {
+            return;
+        }
+
+        currentDefense += defense;
+    }
     public void LoseDamage(int damageAmount)
     {
         if (currentDamage <= 2)

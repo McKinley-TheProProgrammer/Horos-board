@@ -57,7 +57,10 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
     [SerializeField] 
     private RectTransform cardFullDescriptionBox;
     private RectTransform cardTextBG;
-    private Vector2 cardTextBG_sizeDelta;
+    private Vector2 initialCardTextBG_sizeDelta;
+
+    [SerializeField] 
+    private RectTransform posToMoveCardFullDesc;
     
     [SerializeField] 
     private RectTransform cardMiniDescriptionBox;
@@ -89,7 +92,8 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
 
         cardDescBox_Pos = cardFullDescriptionBox.anchoredPosition;
         cardTextBG = cardFullDescriptionBox.GetChild(0).GetComponent<RectTransform>();
-        cardTextBG_sizeDelta = cardTextBG.sizeDelta;
+        initialCardTextBG_sizeDelta = cardTextBG.sizeDelta;
+        cardFullDescriptionDisplay.DOFade(0f, .2f);
         
         SetCardData(cardData);
     }
@@ -97,18 +101,20 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
     public void ReturnCardBGToPosition()
     {
         cardFullDescriptionBox.DOAnchorPos(cardDescBox_Pos, .2f);
-        cardTextBG.DOSizeDelta(cardTextBG_sizeDelta, .2f);
+        cardTextBG.DOSizeDelta(initialCardTextBG_sizeDelta, .2f);
     }
     
     public void OnPointerClick(PointerEventData eventData)
     {
         selected = !selected;
 
-        float xPositionToGo = cardTextBG.sizeDelta.x + 48f;
+        float sizeDeltaX = cardTextBG.sizeDelta.x + 50f;
+        
         if (selected)
         {
-            cardFullDescriptionBox.DOAnchorPosX(-(200 + xPositionToGo), .2f).SetRelative(true);
-            cardTextBG.DOSizeDelta(new Vector2(xPositionToGo, cardTextBG.sizeDelta.y), .2f);
+            cardFullDescriptionBox.DOAnchorPosX(posToMoveCardFullDesc.anchoredPosition.x, .2f).SetRelative(true);
+            
+            cardTextBG.DOSizeDelta(new Vector2(sizeDeltaX, cardTextBG.sizeDelta.y), .2f);
 
             cardFullDescriptionDisplay.DOFade(1f, .2f);
             

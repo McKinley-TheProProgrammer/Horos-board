@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
+using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class BattleManager : MonoBehaviour
 {
@@ -18,7 +20,9 @@ public class BattleManager : MonoBehaviour
 	
     [SerializeField]
     private GameStates state;
-
+    [SerializeField] 
+    public TextMeshProUGUI stateDisplayText;
+    
     [SerializeField] 
     private string winText, loseText;
     [SerializeField] 
@@ -95,15 +99,16 @@ public class BattleManager : MonoBehaviour
     {
         Debug.Log("Choose an action");
 
+        stateDisplayText.text = "É a sua vez";
         cardDeckGroup.MoveBack();
         
-        yield return new WaitUntil(() => playerAttackAction.Value || playerDefenseAction.Value);
+        yield return new WaitUntil(() => !playerAttackAction.Value || !playerDefenseAction.Value);
 
-        if (playerAttackAction.Value)
+        if (!playerAttackAction.Value)
         {
             PlayerAttack();
         }
-        else if (playerDefenseAction.Value)
+        else if (!playerDefenseAction.Value)
         {
             PlayerDefense();
         }
@@ -129,8 +134,8 @@ public class BattleManager : MonoBehaviour
         }
         // Set values to true to guarantee that the Player will not Fire an Input twice
         // Put this in a ChangeState function
-        playerAttackAction.Value = true;
-        playerDefenseAction.Value = true;
+        playerAttackAction.Value = false;
+        playerDefenseAction.Value = false;
 
         state = GameStates.ENEMY_TURN;
         StartCoroutine(EnemyTurn());
@@ -138,20 +143,35 @@ public class BattleManager : MonoBehaviour
 
     IEnumerator EnemyTurn()
     {
+        stateDisplayText.text = "É a vez de Gaia";
         yield return new WaitForSeconds(2f);
+
+        enemyAction = Random.Range(0, 2);
+        switch (enemyAction)
+        {
+            case 0:
+                EnemyAttack();
+                break;
+            case 1:
+                EnemyDefense();
+                break;
+            default:
+                EnemyAttack();
+                break;
+        }
         
-        EnemyAttack();
 
         // put this in a ChangeState function
         state = GameStates.PLAYER_TURN;
         
-        playerAttackAction.Value = false;
-        playerDefenseAction.Value = false;
+        playerAttackAction.Value = true;
+        playerDefenseAction.Value = true;
 
         StartCoroutine(PlayerTurn());
     }
     void PlayerAttack()
     {
+        stateDisplayText.text = "Voce atacou a Gaia";
         playerUnit.Attack(enemyUnit);
     }
 
@@ -162,11 +182,16 @@ public class BattleManager : MonoBehaviour
 
     void EnemyAttack()
     {
+        // Makes the Enemy win more Attack points each round
+        enemyUnit.AddDamage(Random.Range(1,2));
+        stateDisplayText.text = "Gaia Atacou";
         enemyUnit.Attack(playerUnit);
     }
 
     void EnemyDefense()
     {
+        enemyUnit.LoseDefense(-Random.Range(1,5));
+        stateDisplayText.text = "Gaia decidiu se defender do proximo ataque";
         enemyUnit.Defend(playerUnit);
     }
 }

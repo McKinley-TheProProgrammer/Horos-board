@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
 
@@ -18,6 +19,13 @@ public class BattleManager : MonoBehaviour
     [SerializeField]
     private GameStates state;
 
+    [SerializeField] 
+    private string winText, loseText;
+    [SerializeField] 
+    private TextMeshProUGUI endTextDisplay;
+    [SerializeField] 
+    private UIMoveToEffect endGameUI;
+    
     [SerializeField]
     public List<CardData> cardDatas;
     
@@ -28,20 +36,18 @@ public class BattleManager : MonoBehaviour
 	
     [SerializeField]
     public Transform playerBattleStation;
-    
     [SerializeField]
     public Transform[] enemyBattleStations;
-
-    [SerializeField] 
-    public List<RectTransform> cardSlots;
     
     private UnitManager playerUnit, enemyUnit;
     private int enemyAction; // 0 Attacks, 1 Defends, 2 Heal
     
     [SerializeField]
     private BoolReference playerAttackAction, playerDefenseAction;
-
-    [SerializeField] private Sound battleTheme;
+    
+    
+    [SerializeField] 
+    private Sound battleTheme;
     void Awake()
     {
         state = GameStates.START;
@@ -99,15 +105,21 @@ public class BattleManager : MonoBehaviour
 
         if (playerUnit.isDead)
         {
-            state = GameStates.LOSE;
             Debug.Log("Nope, player Dead, u lose");
+            
+            state = GameStates.LOSE;
+            endTextDisplay.text = loseText;
+            endGameUI.MoveToCenter();
             yield break;
         }
 
         if (enemyUnit.isDead)
         {
-            state = GameStates.WIN;
             Debug.Log("Imma be damned the game has been wooooun");
+            
+            state = GameStates.WIN;
+            endTextDisplay.text = winText;
+            endGameUI.MoveToCenter();
             yield break;
         }
         // Set values to true to guarantee that the Player will not Fire an Input twice

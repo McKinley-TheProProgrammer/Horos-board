@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd8e55ae66ea14469528c61bb0bd0ff, type: 3}
   m_Name: EnemyStatus
   m_EditorClassIdentifier: 
-  statusName: Enemy
+  statusName: Gaia
   maxHP:
     _usage: 2
     _value: 20

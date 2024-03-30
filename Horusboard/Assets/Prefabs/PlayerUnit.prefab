@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7bb954ec873d15342bc1fed931c35847, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -234,7 +234,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0
@@ -5113,7 +5113,7 @@ MonoBehaviour:
       - m_Target: {fileID: 2514816224668314115}
         m_TargetAssemblyTypeName: ScaleEffect, Assembly-CSharp
         m_MethodName: Scale
-        m_Mode: 0
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5163,6 +5163,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transformToScale: {fileID: 6179098741944746823}
-  scaleAmount: 1.25
+  scaleAmount: 1.2
   duration: 0.2
   loopBack: 1

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: VirgoCard
   m_EditorClassIdentifier: 
   cardName: Virgo
-  cardIcon: {fileID: 0}
-  cardBackground: {fileID: 0}
+  cardIcon: {fileID: 21300000, guid: da3e71397f9195546bbecb7eee6b4af7, type: 3}
+  cardBackground: {fileID: 21300000, guid: ec10daf8fd12dc74c82b9322873e9dd6, type: 3}
   miniDescription: ADV DEF -2
   cardDescription: "A constela\xE7\xE3o de Virgem possui 15 estrelas principais e
     \xE9 a maior constela\xE7\xE3o do zod\xEDaco.\r\nEfeito: A defesa do advers\xE1rio

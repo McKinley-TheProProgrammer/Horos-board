@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: CancerCard
   m_EditorClassIdentifier: 
   cardName: Cancer
-  cardIcon: {fileID: 0}
-  cardBackground: {fileID: 0}
+  cardIcon: {fileID: 21300000, guid: a0d38a3d115507f479d3adf8be4f7dbd, type: 3}
+  cardBackground: {fileID: 21300000, guid: e4bf0c44b68fa0e48ae98a013a2103d4, type: 3}
   miniDescription: +4 HP
   cardDescription: "A constela\xE7\xE3o de C\xE2ncer possui 5 estrelas principais,
     seu brilho \xE9 fraco e ela \xE9 vista melhor durante a lua nova.\r\nEfeito:

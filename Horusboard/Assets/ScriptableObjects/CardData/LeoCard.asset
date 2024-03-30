@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: LeoCard
   m_EditorClassIdentifier: 
   cardName: Leo
-  cardIcon: {fileID: 0}
-  cardBackground: {fileID: 0}
+  cardIcon: {fileID: 21300000, guid: 5c212892c47dfbb45b6acdded3f61315, type: 3}
+  cardBackground: {fileID: 21300000, guid: 0779719b0e1cd934c9f15afee1c93e5b, type: 3}
   miniDescription: +2 ATQ
   cardDescription: "A constela\xE7\xE3o de Le\xE3o possui 9 estrelas principais e
     \xE9 vis\xEDvel tanto do hemisf\xE9rio sul quanto do norte.\r\nEfeito: Voc\xEA

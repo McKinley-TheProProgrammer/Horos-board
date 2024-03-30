@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: PiscesCard
   m_EditorClassIdentifier: 
   cardName: Pisces
-  cardIcon: {fileID: 0}
-  cardBackground: {fileID: 0}
+  cardIcon: {fileID: 21300000, guid: dd7703615c830dd48a9891c9d06bf9a2, type: 3}
+  cardBackground: {fileID: 21300000, guid: f1a89bb8bcf23ca4f81977b4395e2e67, type: 3}
   miniDescription: "ADV N\xC3O CURA (x3T)"
   cardDescription: "A constela\xE7\xE3o de Peixes possui 18 estrelas principais e
     \xE9 uma das maiores constela\xE7\xF5es no c\xE9u, apesar do fraco brilho. \r\nEfeito:Seu

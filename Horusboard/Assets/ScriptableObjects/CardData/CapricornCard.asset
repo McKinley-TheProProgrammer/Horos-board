@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: CapricornCard
   m_EditorClassIdentifier: 
   cardName: Capricorn
-  cardIcon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  cardBackground: {fileID: 21300000, guid: 91be5669541b8f4469b74899c3b98a1f, type: 3}
+  cardIcon: {fileID: 21300000, guid: 28c1e85f42434ca4987fd411d2d66390, type: 3}
+  cardBackground: {fileID: 21300000, guid: dec66e9e5ef877f47be7044bc492848f, type: 3}
   miniDescription: REFLETOR
   cardDescription: "A constela\xE7\xE3o de Capric\xF3rnio possui 13 estrelas principais
     e \xE9 a menor constela\xE7\xE3o do zod\xEDaco\r\nEfeito: O ataque do inimigo

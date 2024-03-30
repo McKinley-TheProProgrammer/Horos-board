@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: AquariusCard
   m_EditorClassIdentifier: 
   cardName: Aquarius
-  cardIcon: {fileID: 0}
-  cardBackground: {fileID: 0}
+  cardIcon: {fileID: 21300000, guid: 32fca13e88e02124c952bca8c090c898, type: 3}
+  cardBackground: {fileID: 21300000, guid: d37e1e0629641804d952c608188daf32, type: 3}
   miniDescription: ADV SUP -5
   cardDescription: "A constela\xE7\xE3o de Aqu\xE1rio possui 14 estrelas principais
     e foi identificado inicialmente na Babil\xF4nia.\r\nEfeito: Abaixa os pontos

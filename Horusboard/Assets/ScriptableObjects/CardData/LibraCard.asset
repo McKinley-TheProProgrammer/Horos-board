@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: LibraCard
   m_EditorClassIdentifier: 
   cardName: Libra
-  cardIcon: {fileID: 0}
-  cardBackground: {fileID: 0}
+  cardIcon: {fileID: 21300000, guid: 57962fcaeee6563479dddc9c97cb0a37, type: 3}
+  cardBackground: {fileID: 21300000, guid: 099c98cf1a207b24eb4474f012288510, type: 3}
   miniDescription: SUP +4
   cardDescription: "A constela\xE7\xE3o de Libra possui 6 estrelas principais e \xE9
     a \xFAnica constela\xE7\xE3o do zod\xEDaco nomeada por um objeto.\r\nEfeito:

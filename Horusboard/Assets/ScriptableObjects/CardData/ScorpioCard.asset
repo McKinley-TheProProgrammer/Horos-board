@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ScorpioCard
   m_EditorClassIdentifier: 
   cardName: Scorpio
-  cardIcon: {fileID: 0}
-  cardBackground: {fileID: 0}
+  cardIcon: {fileID: 21300000, guid: b149ec7c00f0c3643b622dae8a9d71d8, type: 3}
+  cardBackground: {fileID: 21300000, guid: 918c58a5c4796f2499e0701081c0c774, type: 3}
   miniDescription: ADV - 4 HP(x3T)
   cardDescription: "A constela\xE7\xE3o de Escorpi\xE3o possui 18 estrelas principais
     e \xE9 uma das constela\xE7\xF5es mais brilhantes do zod\xEDaco.\r\nEfeito: Seu

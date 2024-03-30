@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: AresCard
   m_EditorClassIdentifier: 
   cardName: Ares
-  cardIcon: {fileID: 0}
-  cardBackground: {fileID: 0}
+  cardIcon: {fileID: 21300000, guid: fde53bfe645db0e4c8abcc9b56266ae3, type: 3}
+  cardBackground: {fileID: 21300000, guid: 359899cbe8017d9478635c32e8095787, type: 3}
   miniDescription: ADV -2 ATQ
   cardDescription: "A constela\xE7\xE3o de \xC1ries possui 4 estrelas principais
     e \xE9 a segunda menor constela\xE7\xE3o do zod\xEDaco\r\nEfeito: O ataque do

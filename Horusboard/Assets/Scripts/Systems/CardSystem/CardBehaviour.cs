@@ -23,7 +23,7 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
         cardMiniDescriptionDisplay.text = cardData.miniDescription;
         cardFullDescriptionDisplay.text = cardData.cardDescription;
         
-        Color bgColor = Color.gray;
+        /*Color bgColor = Color.gray;
         
         switch (cardData.cardType)
         {
@@ -41,7 +41,7 @@ public class CardBehaviour : MonoBehaviour, IPointerClickHandler
                 break;
         }
 
-        cardBG.color = bgColor;
+        cardBG.color = bgColor;*/
     }
     
     [SerializeField]
